@@ -1,0 +1,8 @@
+﻿# 용량이 큰 데이터/산출물은 push 제외 (로컬에는 유지)
+*.zip
+*.pt
+.ipynb_checkpoints/
+25MAICON_기출/Problem#1/data/
+25MAICON_기출/Problem#2/data/
+25MAICON_기출/Problem#2/runs_p2/
+25MAICON_기출/Problem#2/dataset_p2/
