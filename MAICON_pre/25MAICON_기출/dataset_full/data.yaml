@@ -1,0 +1,6 @@
+path: /home/jovyan/work/MAICON_hub/MAICON_pre/25MAICON_기출/dataset_full
+train: images/train
+val: images/val
+names:
+  0: boat
+  1: warship

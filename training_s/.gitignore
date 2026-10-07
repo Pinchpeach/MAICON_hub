@@ -8,3 +8,9 @@
 25MAICON_기출/Problem#2/dataset_p2/
 26_10_07/Problem3/data/
 26_10_07/Problem1/catboost_info/
+
+# 압축된 데이터 zip 은 추적(이름 지정). 원본 폴더는 위에서 제외됨
+!25MAICON_기출/problem_1_data.zip
+!25MAICON_기출/problem_2_data.zip
+!25MAICON_기출/problem_3_data.zip
+!26_10_07/Problem3/data.zip

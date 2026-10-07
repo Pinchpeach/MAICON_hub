@@ -1,0 +1,11 @@
+# 비밀 정보(API 토큰)가 들어 있는 파일: 토큰을 제거하기 전에는 올리지 않음 (로컬에는 그대로 있음)
+Kaggle/P1/global-wheat-detection.ipynb
+
+# 용량 한계(GitHub 파일당 100MB)로 제외. 데이터 출처와 복원 방법은 DATA_SOURCES.md 참고
+Kaggle/P1/dataset/
+MAICON_pre/25MAICON_기출/yolov8x.pt
+MAICON_pre/25MAICON_기출/yolov8x-cls.pt
+
+# 가중치(.pt)는 zip 으로 압축해 올린 것만 추적. 원본 .pt 는 제외
+*.pt
+.ipynb_checkpoints/
