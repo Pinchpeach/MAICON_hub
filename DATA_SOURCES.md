@@ -30,5 +30,6 @@
 | `training_s/26_10_07/Problem1/data` | 모의 대회 P1. 문제 지문상 출처: ggplot2 diamonds 데이터셋을 대회용으로 재구성 |
 | `training_s/26_10_07/Problem2/data` | 모의 대회 P2. 문제 지문상 출처: NSMC(Naver Sentiment Movie Corpus, CC0) 일부를 대회용으로 재구성 |
 
-## 올리지 않은 파일 (비밀 정보)
-- `Kaggle/P1/global-wheat-detection.ipynb`: Kaggle API 토큰이 평문으로 들어 있어 제외했습니다. 토큰을 제거한 뒤 올리세요.
+## 비밀 정보 처리
+- `Kaggle/P1/global-wheat-detection.ipynb`: 첫 셀에 있던 Kaggle API 토큰 줄을 제거하고 올렸습니다. 토큰은 노트북 안의 `getpass` 셀에서 입력받아 환경변수로만 사용합니다.
+- 노트북이나 저장소에 토큰, 키, 비밀번호를 적지 않습니다. 이전에 노출된 토큰은 Kaggle에서 재발급(교체)하는 것을 권장합니다.
