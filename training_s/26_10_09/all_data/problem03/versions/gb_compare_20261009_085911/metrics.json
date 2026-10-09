@@ -1,0 +1,14 @@
+{
+  "RF": {
+    "f1": 0.5853658536585366,
+    "precision": 0.8571428571428571,
+    "recall": 0.4444444444444444
+  },
+  "GB": {
+    "f1": 0.6666666666666666,
+    "precision": 0.7333333333333333,
+    "recall": 0.6111111111111112
+  },
+  "validation": "Same stratified 80/20 holdout, random_state=42, threshold=0.5",
+  "submission": "Existing RF submission retained; comparison only"
+}

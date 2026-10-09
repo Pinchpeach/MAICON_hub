@@ -1,0 +1,11 @@
+{
+  "model": "StandardScaler + RF300",
+  "metrics": {
+    "f1": 0.5853658536585366,
+    "precision": 0.8571428571428571,
+    "recall": 0.4444444444444444
+  },
+  "validation": "stratified 80/20 random_state=42 threshold=0.5",
+  "execution": "Notebook code cells executed sequentially in Python; captured stdout, not Jupyter kernel",
+  "submission_sha256": "2f38cd990eedaecbbd59d3f88053bc40abdc42fde472959a4c1cd1db44ac5c26"
+}

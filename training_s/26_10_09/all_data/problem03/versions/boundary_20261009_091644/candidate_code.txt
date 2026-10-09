@@ -1,0 +1,78 @@
+import numpy as np
+import pandas as pd
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import make_pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import StratifiedKFold
+from sklearn.metrics import f1_score, precision_score, recall_score
+from xgboost import XGBClassifier
+from catboost import CatBoostClassifier
+
+train = pd.read_csv('data/train.csv')
+test = pd.read_csv('data/test.csv')
+sample = pd.read_csv('data/sample_submission.csv')
+base_num = ['air_temperature_k', 'process_temperature_k',
+            'rotational_speed_rpm', 'torque_nm', 'tool_wear_min']
+added_num = ['temperature_gap_k', 'mechanical_power_w', 'torque_wear']
+def sensor_features(data):
+    x = data[base_num + ['type']].copy()
+    x['temperature_gap_k'] = x.process_temperature_k - x.air_temperature_k
+    x['mechanical_power_w'] = x.torque_nm * x.rotational_speed_rpm * (2 * np.pi / 60)
+    x['torque_wear'] = x.torque_nm * x.tool_wear_min
+    return x
+
+def sensor_models(numeric):
+    def pipeline(estimator):
+        prep = ColumnTransformer([
+            ('numeric', make_pipeline(SimpleImputer(strategy='median'), StandardScaler()), numeric),
+            ('category', OneHotEncoder(handle_unknown='ignore'), ['type'])])
+        return make_pipeline(prep, estimator)
+    return [pipeline(RandomForestClassifier(n_estimators=300, n_jobs=2, random_state=42)),
+        pipeline(XGBClassifier(n_estimators=300, max_depth=3, learning_rate=0.05,
+            subsample=0.8, colsample_bytree=0.8, min_child_weight=1, reg_lambda=1,
+            objective='binary:logistic', eval_metric='logloss', tree_method='hist',
+            n_jobs=2, random_state=42)),
+        pipeline(CatBoostClassifier(iterations=300, depth=6, learning_rate=0.05,
+            loss_function='Logloss', random_seed=42, thread_count=2,
+            verbose=False, allow_writing_files=False))]
+
+sensor_X = sensor_features(train)
+sensor_test = sensor_features(test)
+y = train.machine_failure
+
+from sklearn.ensemble import GradientBoostingClassifier, HistGradientBoostingClassifier
+from sklearn.base import clone
+
+def boundary_features(data):
+    x = sensor_features(data)
+    for category in ['L','M','H']:
+        gate = (x['type'] == category).astype(float)
+        x['wear_' + category] = x.tool_wear_min * gate
+        x['load_wear_' + category] = x.torque_wear * gate
+    return x
+boundary_X = boundary_features(train)
+boundary_test = boundary_features(test)
+boundary_num = base_num + added_num + [c for c in boundary_X if c.startswith(('wear_', 'load_wear_'))]
+def boundary_model(kind):
+    prep = ColumnTransformer([
+        ('numeric',make_pipeline(SimpleImputer(strategy='median'),StandardScaler()),boundary_num),
+        ('category',OneHotEncoder(handle_unknown='ignore',sparse_output=False),['type'])],sparse_threshold=0)
+    if kind == 'GB':
+        estimator = GradientBoostingClassifier(n_estimators=400,learning_rate=0.05,
+            max_depth=3,min_samples_leaf=3,random_state=42)
+    else:
+        estimator = HistGradientBoostingClassifier(max_iter=300,learning_rate=0.05,
+            max_leaf_nodes=15,min_samples_leaf=10,l2_regularization=1,
+            early_stopping=False,random_state=42)
+    return make_pipeline(prep,estimator)
+
+boundary_oof = {name:np.zeros(len(train)) for name in ['GB','HGB']}
+for fold,(a,b) in enumerate(StratifiedKFold(n_splits=5,shuffle=True,random_state=42).split(boundary_X,y),1):
+    for name in boundary_oof:
+        estimator = boundary_model(name)
+        estimator.fit(boundary_X.iloc[a],y.iloc[a])
+        boundary_oof[name][b] = estimator.predict_proba(boundary_X.iloc[b])[:,1]
+    print('fold',fold,{name:round(f1_score(y.iloc[b],prob[b]>=0.5),4)
+                       for name,prob in boundary_oof.items()},flush=True)

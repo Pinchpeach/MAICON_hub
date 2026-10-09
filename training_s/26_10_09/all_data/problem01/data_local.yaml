@@ -1,0 +1,8 @@
+path: C:/Users/User/Desktop/root/docker11/notebooks/MAICON_hub/training_s/26_10_09/all_data/problem01/data
+train: train/images
+val: val/images
+names:
+  0: military_tank
+  1: military_truck
+  2: military_vehicle
+  3: civilian_vehicle

@@ -14,3 +14,21 @@
 !25MAICON_기출/problem_2_data.zip
 !25MAICON_기출/problem_3_data.zip
 !26_10_07/Problem3/data.zip
+
+# --- 2026-10-09 추가: 공개 저장소이므로 대용량 데이터·정답 파일·학습 산출물 제외 ---
+__pycache__/
+*.npz
+*.pkl
+ob_train/*/*/data/
+26_10_08/part1/Problem3/data/
+26_10_08/part2/정답지/
+26_10_08/part2/problemset6/
+26_10_08/part2/*/Problem3/data/
+26_10_09/all_data/problem01/data/
+26_10_09/all_data/problem01/data_dummy/
+26_10_09/all_data/problem01/data_fixed/
+26_10_09/all_data/problem01/runs/
+26_10_09/all_data/problem01/audit/
+26_10_09/all_data/problem01/weights/
+26_10_09/all_data/problem02/stack_cache/
+26_10_09/all_data/problem03/data/
