@@ -1,0 +1,16 @@
+{
+ "name": "hand_frz10_e30",
+ "epochs": 30,
+ "freeze": 10,
+ "person_thr": 0.25,
+ "person_mae": 0.36666666666666664,
+ "person_loo": 0.4666666666666667,
+ "person_bias": -0.03333333333333333,
+ "vehicle_thr": 0.25,
+ "vehicle_mae": 0.5666666666666667,
+ "vehicle_loo": 0.7666666666666667,
+ "vehicle_bias": -0.16666666666666666,
+ "person_mae_mainthr": 0.6666666666666666,
+ "vehicle_mae_mainthr": 0.9333333333333333,
+ "seconds": 108.75827312469482
+}

@@ -1,0 +1,7 @@
+# 사람이 직접 고친 박스(학습 30장). 'guess' 표시 박스는 추정임
+path: .
+train: images
+val: images
+names:
+  0: person
+  1: vehicle

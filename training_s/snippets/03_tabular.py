@@ -5,6 +5,8 @@
 #   oof, scores = run_cv(models, X, y, 'reg', folds=3, log_target=True)
 #   pred = fit_full_predict(models, X, y, X_test, 'reg', log_target=True)
 # 팁: 학습이 5분 넘으면 folds=3 이나 부분 데이터로 비교, 모델 교체보다 정리·결측 복원·파생 특징·타깃 변환이 먼저.
+#     학습이 약 100행 이하면 이 파일 대신 07_small_tabular.py(구조에 맞는 단순 모델 하나)를 쓴다. 80행에서는 트리·부스팅이 선형·규칙보다 나빴다.
+#     모델을 고르기 전에 02_inspect.py 의 target_structure 로 타깃 구조(쏠림·기록 단위·합 제약)를 먼저 본다(규칙 14.3 공통 첫 단계).
 import time, warnings
 import numpy as np, pandas as pd
 from sklearn.model_selection import KFold, StratifiedKFold

@@ -1,0 +1,5 @@
+path: "C:/Users/User/Desktop/root/docker11/notebooks/MAICON_hub/training_s/26_10_10/p2/_tl_data"
+train: images/all
+val: images/val
+names:
+  0: drone

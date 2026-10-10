@@ -1,0 +1,630 @@
+      filename  person_true  person_boxes  vehicle_true  vehicle_boxes  both_match
+S12_2_0001.jpg            1             1             3              1       False
+S12_2_0002.jpg            2             2             0              0        True
+S12_2_0003.jpg            4             4             1              1        True
+S12_2_0004.jpg            2             1             0              0       False
+S12_2_0005.jpg            7             7             3              4       False
+S12_2_0006.jpg            0             0             1              0       False
+S12_2_0007.jpg            8             6             5              5       False
+S12_2_0008.jpg            1             1             0              0        True
+S12_2_0009.jpg            4             3             0              0       False
+S12_2_0010.jpg            1             2             5              5       False
+S12_2_0011.jpg            1             1             3              3        True
+S12_2_0012.jpg            0             0             1              0       False
+S12_2_0013.jpg            4             4             1              0       False
+S12_2_0014.jpg            3             3             2              1       False
+S12_2_0015.jpg            1             1             7              6       False
+S12_2_0016.jpg            3             2             5              5       False
+S12_2_0017.jpg            1             0             2              3       False
+S12_2_0018.jpg            0             0             1              1        True
+S12_2_0019.jpg            0             0             2              1       False
+S12_2_0020.jpg            0             0             2              1       False
+S12_2_0021.jpg            3             4             0              0       False
+S12_2_0022.jpg            0             0             2              1       False
+S12_2_0023.jpg            0             0             2              2        True
+S12_2_0024.jpg            3             3             5              5        True
+S12_2_0025.jpg            0             0             0              0        True
+S12_2_0026.jpg            1             1             0              0        True
+S12_2_0027.jpg            0             0             0              0        True
+S12_2_0028.jpg            0             1             1              0       False
+S12_2_0029.jpg           11            11             4              4        True
+S12_2_0030.jpg            9            10             1              1       False
+일치 11/30 | 사람 박스 합 68 (정답 70) | 차량 박스 합 50 (정답 59) | 라벨 행 수 118
+Ultralytics 8.4.174  Python-3.14.7 torch-2.14.1+cu126 CUDA:0 (NVIDIA GeForce RTX 4050 Laptop GPU, 6140MiB)
+[34m[1mengine\trainer: [0magnostic_nms=False, amp=True, angle=1.0, augment=False, auto_augment=randaugment, batch=8, bgr=0.0, box=7.5, cache=False, cfg=None, channels_last=None, classes=None, close_mosaic=10, cls=0.5, cls_pw=0.0, cls_remap=True, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold0\data.yaml, degrees=0.0, deterministic=True, device=0, dfl=1.5, dgrad=0.5, dis=6.0, distill_model=None, dlam=1.0, dlog=1.0, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=20, erasing=0.4, exist_ok=True, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=0, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, iou=0.7, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\yolov8n.pt, momentum=0.937, mosaic=1.0, multi_scale=0.0, name=fold0, nbs=64, nms=None, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=0, perspective=0.0, plots=False, pose=12.0, pretrained=True, profile=False, project=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs, quantize=None, rect=False, resume=False, retina_masks=False, rle=1.0, save=True, save_conf=False, save_crop=False, save_dir=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold0, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=tracktrack.yaml, translate=0.1, val=False, verbose=False, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=0, workspace=None
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]             
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]             
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]                 
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]                 
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]                  
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]                 
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
+ 22        [15, 18, 21]  1    897664  ultralytics.nn.modules.head.Detect           [80, 16, None, [64, 128, 256]]
+Model summary: 129 layers, 3,157,200 parameters, 3,157,184 gradients, 8.9 GFLOPs
+
+Transferred 355/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mdownloading yolo26n.pt for AMP checks (one-time, not used for training)...
+[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt to 'weights\yolo26n.pt': 58% ━━━━━━━───── 3.1/5.3MB 30.4MB/s 0.1s<0.1s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt to 'weights\yolo26n.pt': 100% ━━━━━━━━━━━━ 5.3MB 35.8MB/s 0.1s
+[34m[1mAMP: [0mchecks passed 
+WARNING [34m[1mtrain: [0mSlow image access detected (ping: 0.00.0 ms, read: 16.29.2 MB/s, size: 137.8 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips
+[K[34m[1mtrain: [0mScanning C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold0\labels\train... 24 images, 1 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 24/24 435.8it/s 0.1s
+[34m[1mtrain: [0mNew cache created: C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold0\labels\train.cache
+[34m[1mval: [0mFast image access  (ping: 0.00.0 ms, read: 2720.3920.8 MB/s, size: 173.7 KB)
+[K[34m[1mval: [0mScanning C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold0\labels\train.cache... 24 images, 1 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 24/24 8.4Mit/s 0.0s
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and determining best 'optimizer' and 'lr0' automatically... 
+[34m[1moptimizer:[0m AdamW(lr=0.000119, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+Using 24 train, 24 val images for fraction=1.0 at imgsz=640
+Using 0 dataloader workers
+Logging results to [1mC:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold0[0m
+Starting training for 20 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       1/20      1.21G      1.148      2.194       1.38         27        640: 0% ──────────── 0/3  0.5s[K       1/20      1.23G      1.175      1.998        1.3         84        640: 33% ━━━━──────── 1/3 1.5it/s 0.7s<1.3s[K       1/20      1.24G      1.112      1.823      1.245         59        640: 66% ━━━━━━━━──── 2/3 2.5it/s 1.0s<0.4s[K       1/20      1.24G      1.112      1.823      1.245         59        640: 100% ━━━━━━━━━━━━ 3/3 3.1it/s 1.0s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       2/20      1.24G      1.252      2.031      1.305         48        640: 0% ──────────── 0/3  0.1s[K       2/20      1.24G      1.211      1.815      1.266         84        640: 33% ━━━━──────── 1/3 1.4it/s 0.4s<1.4s[K       2/20      1.24G      1.101      1.724      1.206         71        640: 66% ━━━━━━━━──── 2/3 2.6it/s 0.5s<0.4s[K       2/20      1.24G      1.101      1.724      1.206         71        640: 100% ━━━━━━━━━━━━ 3/3 5.6it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       3/20      1.24G      1.237      1.716      1.472         49        640: 0% ──────────── 0/3  0.2s[K       3/20      1.24G      1.168      1.553      1.292         79        640: 33% ━━━━──────── 1/3 1.7it/s 0.3s<1.2s[K       3/20      1.24G      1.122      1.582      1.226         85        640: 66% ━━━━━━━━──── 2/3 2.6it/s 0.6s<0.4s[K       3/20      1.24G      1.122      1.582      1.226         85        640: 100% ━━━━━━━━━━━━ 3/3 5.4it/s 0.6s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       4/20      1.24G      1.016      2.127      1.316         68        640: 0% ──────────── 0/3  0.2s[K       4/20      1.24G      1.052      1.822      1.243         85        640: 33% ━━━━──────── 1/3 1.7it/s 0.4s<1.2s[K       4/20      1.24G      1.024      1.799      1.236         62        640: 66% ━━━━━━━━──── 2/3 3.1it/s 0.5s<0.3s[K       4/20      1.24G      1.024      1.799      1.236         62        640: 100% ━━━━━━━━━━━━ 3/3 5.9it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       5/20      1.24G      0.945      1.754      1.175         35        640: 0% ──────────── 0/3  0.2s[K       5/20      1.24G      1.089      1.752      1.276         77        640: 33% ━━━━──────── 1/3 1.8it/s 0.3s<1.1s[K       5/20      1.24G      1.043      1.646       1.23         76        640: 66% ━━━━━━━━──── 2/3 3.1it/s 0.5s<0.3s[K       5/20      1.24G      1.043      1.646       1.23         76        640: 100% ━━━━━━━━━━━━ 3/3 6.0it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       6/20      1.24G     0.9318      1.827      1.198         38        640: 0% ──────────── 0/3  0.2s[K       6/20      1.24G      1.043      1.796        1.2         94        640: 33% ━━━━──────── 1/3 1.4it/s 0.4s<1.4s[K       6/20      1.24G     0.9949      1.677      1.184         55        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K       6/20      1.24G     0.9949      1.677      1.184         55        640: 100% ━━━━━━━━━━━━ 3/3 5.7it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       7/20      1.24G      1.047       1.62      1.186         76        640: 0% ──────────── 0/3  0.2s[K       7/20      1.24G      1.067      1.668      1.192         68        640: 33% ━━━━──────── 1/3 1.7it/s 0.3s<1.2s[K       7/20      1.24G      1.048      1.663      1.184         77        640: 66% ━━━━━━━━──── 2/3 3.0it/s 0.5s<0.3s[K       7/20      1.24G      1.048      1.663      1.184         77        640: 100% ━━━━━━━━━━━━ 3/3 5.8it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       8/20      1.24G      1.049      2.087      1.242         52        640: 0% ──────────── 0/3  0.2s[K       8/20      1.24G      1.158      1.913      1.338         35        640: 33% ━━━━──────── 1/3 1.7it/s 0.3s<1.2s[K       8/20      1.24G      1.104      1.827      1.262         73        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K       8/20      1.24G      1.104      1.827      1.262         73        640: 100% ━━━━━━━━━━━━ 3/3 5.6it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       9/20      1.24G      1.042      1.804       1.12         74        640: 0% ──────────── 0/3  0.1s[K       9/20      1.24G     0.9825      1.773      1.103         60        640: 33% ━━━━──────── 1/3 1.5it/s 0.3s<1.3s[K       9/20      1.24G     0.9726      1.603      1.155         39        640: 66% ━━━━━━━━──── 2/3 2.7it/s 0.5s<0.4s[K       9/20      1.24G     0.9726      1.603      1.155         39        640: 100% ━━━━━━━━━━━━ 3/3 5.8it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      10/20      1.24G      1.027      1.547       1.24         55        640: 0% ──────────── 0/3  0.1s[K      10/20      1.24G      1.012      1.492        1.2         83        640: 33% ━━━━──────── 1/3 1.7it/s 0.3s<1.2s[K      10/20      1.24G      1.075      1.527      1.203         66        640: 66% ━━━━━━━━──── 2/3 3.2it/s 0.5s<0.3s[K      10/20      1.24G      1.075      1.527      1.203         66        640: 100% ━━━━━━━━━━━━ 3/3 6.3it/s 0.5s
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      11/20      1.24G     0.7427      1.236      1.033         33        640: 0% ──────────── 0/3  0.2s[K      11/20      1.24G      0.856      1.206      1.079         51        640: 33% ━━━━──────── 1/3 2.0it/s 0.3s<1.0s[K      11/20      1.24G      0.861      1.192      1.086         25        640: 66% ━━━━━━━━──── 2/3 3.2it/s 0.5s<0.3s[K      11/20      1.24G      0.861      1.192      1.086         25        640: 100% ━━━━━━━━━━━━ 3/3 6.3it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      12/20      1.24G      0.798      1.355      1.049         36        640: 0% ──────────── 0/3  0.2s[K      12/20      1.24G      0.783      1.145      1.014         42        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.1s[K      12/20      1.24G     0.8106      1.146      1.063         30        640: 66% ━━━━━━━━──── 2/3 3.2it/s 0.5s<0.3s[K      12/20      1.24G     0.8106      1.146      1.063         30        640: 100% ━━━━━━━━━━━━ 3/3 6.3it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      13/20      1.24G      1.085      1.127      1.113         49        640: 0% ──────────── 0/3  0.2s[K      13/20      1.24G      0.976      1.176      1.133         33        640: 33% ━━━━──────── 1/3 2.2it/s 0.3s<0.9s[K      13/20      1.24G      0.905      1.249      1.102         25        640: 66% ━━━━━━━━──── 2/3 4.0it/s 0.4s<0.3s[K      13/20      1.24G      0.905      1.249      1.102         25        640: 100% ━━━━━━━━━━━━ 3/3 7.1it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      14/20      1.24G     0.7069      1.075      1.016         27        640: 0% ──────────── 0/3  0.2s[K      14/20      1.24G     0.8018      1.201      1.023         31        640: 33% ━━━━──────── 1/3 2.6it/s 0.3s<0.8s[K      14/20      1.24G     0.8451      1.112      1.057         52        640: 66% ━━━━━━━━──── 2/3 3.2it/s 0.5s<0.3s[K      14/20      1.24G     0.8451      1.112      1.057         52        640: 100% ━━━━━━━━━━━━ 3/3 6.2it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      15/20      1.24G     0.8829      1.063      1.162         37        640: 0% ──────────── 0/3  0.1s[K      15/20      1.24G      0.912      1.079      1.126         34        640: 33% ━━━━──────── 1/3 2.0it/s 0.3s<1.0s[K      15/20      1.24G     0.8887       1.07      1.109         38        640: 66% ━━━━━━━━──── 2/3 3.1it/s 0.5s<0.3s[K      15/20      1.24G     0.8887       1.07      1.109         38        640: 100% ━━━━━━━━━━━━ 3/3 6.5it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      16/20      1.24G     0.6794     0.9556       1.02         34        640: 0% ──────────── 0/3  0.1s[K      16/20      1.24G     0.7179     0.9455      1.044         39        640: 33% ━━━━──────── 1/3 2.0it/s 0.3s<1.0s[K      16/20      1.24G     0.7668      1.017      1.052         34        640: 66% ━━━━━━━━──── 2/3 3.1it/s 0.4s<0.3s[K      16/20      1.24G     0.7668      1.017      1.052         34        640: 100% ━━━━━━━━━━━━ 3/3 6.9it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      17/20      1.24G     0.7837      1.093      1.018         38        640: 0% ──────────── 0/3  0.1s[K      17/20      1.24G     0.8499      1.045      1.074         32        640: 33% ━━━━──────── 1/3 2.2it/s 0.3s<0.9s[K      17/20      1.24G     0.7932     0.9865      1.046         42        640: 66% ━━━━━━━━──── 2/3 3.5it/s 0.4s<0.3s[K      17/20      1.24G     0.7932     0.9865      1.046         42        640: 100% ━━━━━━━━━━━━ 3/3 7.0it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      18/20      1.24G     0.8259      1.279      1.114         22        640: 0% ──────────── 0/3  0.1s[K      18/20      1.24G     0.7108      1.099      1.025         23        640: 33% ━━━━──────── 1/3 2.3it/s 0.3s<0.9s[K      18/20      1.24G      0.741      1.018      1.024         61        640: 66% ━━━━━━━━──── 2/3 4.1it/s 0.4s<0.2s[K      18/20      1.24G      0.741      1.018      1.024         61        640: 100% ━━━━━━━━━━━━ 3/3 7.8it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      19/20      1.24G     0.9445      1.131      1.148         33        640: 0% ──────────── 0/3  0.1s[K      19/20      1.24G     0.9369      1.043       1.13         46        640: 33% ━━━━──────── 1/3 1.6it/s 0.3s<1.3s[K      19/20      1.24G     0.9052      1.122      1.149         26        640: 66% ━━━━━━━━──── 2/3 3.0it/s 0.5s<0.3s[K      19/20      1.24G     0.9052      1.122      1.149         26        640: 100% ━━━━━━━━━━━━ 3/3 6.1it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      20/20      1.24G     0.7127      1.033      1.025         34        640: 0% ──────────── 0/3  0.2s[K      20/20      1.24G     0.8081     0.9856      1.045         40        640: 33% ━━━━──────── 1/3 1.5it/s 0.3s<1.3s[K      20/20      1.24G     0.7758     0.9812      1.037         29        640: 66% ━━━━━━━━──── 2/3 3.0it/s 0.5s<0.3s[K      20/20      1.24G     0.7758     0.9812      1.037         29        640: 100% ━━━━━━━━━━━━ 3/3 5.9it/s 0.5s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 1/2 1.6it/s 0.2s<0.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 6.4it/s 0.3s
+                   all         24        115      0.816      0.735      0.828      0.711
+
+20 epochs completed in 0.005 hours.
+Optimizer stripped from C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold0\weights\last.pt, 6.5MB
+Optimizer stripped from C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold0\weights\best.pt, 6.5MB
+
+Validating C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold0\weights\best.pt...
+Ultralytics 8.4.174  Python-3.14.7 torch-2.14.1+cu126 CUDA:0 (NVIDIA GeForce RTX 4050 Laptop GPU, 6140MiB)
+Model summary (fused): 72 layers, 3,151,904 parameters, 0 gradients, 8.7 GFLOPs
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 1/2 1.7it/s 0.2s<0.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 8.6it/s 0.2s
+                   all         24        115      0.817      0.734      0.828      0.712
+Speed: 0.3ms preprocess, 3.1ms inference, 0.0ms loss, 1.3ms postprocess per image
+[hand_all_e20] fold 0 완료 (25s)
+Ultralytics 8.4.174  Python-3.14.7 torch-2.14.1+cu126 CUDA:0 (NVIDIA GeForce RTX 4050 Laptop GPU, 6140MiB)
+[34m[1mengine\trainer: [0magnostic_nms=False, amp=True, angle=1.0, augment=False, auto_augment=randaugment, batch=8, bgr=0.0, box=7.5, cache=False, cfg=None, channels_last=None, classes=None, close_mosaic=10, cls=0.5, cls_pw=0.0, cls_remap=True, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold1\data.yaml, degrees=0.0, deterministic=True, device=0, dfl=1.5, dgrad=0.5, dis=6.0, distill_model=None, dlam=1.0, dlog=1.0, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=20, erasing=0.4, exist_ok=True, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=0, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, iou=0.7, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\yolov8n.pt, momentum=0.937, mosaic=1.0, multi_scale=0.0, name=fold1, nbs=64, nms=None, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=0, perspective=0.0, plots=False, pose=12.0, pretrained=True, profile=False, project=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs, quantize=None, rect=False, resume=False, retina_masks=False, rle=1.0, save=True, save_conf=False, save_crop=False, save_dir=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold1, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=tracktrack.yaml, translate=0.1, val=False, verbose=False, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=0, workspace=None
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]             
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]             
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]                 
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]                 
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]                  
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]                 
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
+ 22        [15, 18, 21]  1    897664  ultralytics.nn.modules.head.Detect           [80, 16, None, [64, 128, 256]]
+Model summary: 129 layers, 3,157,200 parameters, 3,157,184 gradients, 8.9 GFLOPs
+
+Transferred 355/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed 
+WARNING [34m[1mtrain: [0mSlow image access detected (ping: 0.00.0 ms, read: 23.613.6 MB/s, size: 138.7 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips
+[K[34m[1mtrain: [0mScanning C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold1\labels\train... 24 images, 2 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 24/24 804.8it/s 0.0s
+[34m[1mtrain: [0mNew cache created: C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold1\labels\train.cache
+[34m[1mval: [0mFast image access  (ping: 0.00.0 ms, read: 1409.6996.7 MB/s, size: 112.5 KB)
+[K[34m[1mval: [0mScanning C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold1\labels\train.cache... 24 images, 2 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 24/24 10.1Mit/s 0.0s
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and determining best 'optimizer' and 'lr0' automatically... 
+[34m[1moptimizer:[0m AdamW(lr=0.000119, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+Using 24 train, 24 val images for fraction=1.0 at imgsz=640
+Using 0 dataloader workers
+Logging results to [1mC:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold1[0m
+Starting training for 20 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       1/20      1.26G      1.079       2.35      1.332         17        640: 0% ──────────── 0/3  0.2s[K       1/20      1.27G     0.9548      1.825      1.187         69        640: 33% ━━━━──────── 1/3 1.8it/s 0.4s<1.1s[K       1/20      1.29G     0.9254      1.696      1.143         44        640: 66% ━━━━━━━━──── 2/3 2.5it/s 0.6s<0.4s[K       1/20      1.29G     0.9254      1.696      1.143         44        640: 100% ━━━━━━━━━━━━ 3/3 4.7it/s 0.6s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       2/20      1.29G     0.9301      1.499      1.176         34        640: 0% ──────────── 0/3  0.2s[K       2/20      1.29G      1.054      1.591      1.194        109        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.1s[K       2/20      1.29G       1.06      1.629       1.21         58        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K       2/20      1.29G       1.06      1.629       1.21         58        640: 100% ━━━━━━━━━━━━ 3/3 5.8it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       3/20      1.29G      1.158       1.58      1.384         52        640: 0% ──────────── 0/3  0.1s[K       3/20      1.29G     0.9904      1.572      1.259         48        640: 33% ━━━━──────── 1/3 2.1it/s 0.3s<1.0s[K       3/20      1.29G      1.073      1.577      1.281         76        640: 66% ━━━━━━━━──── 2/3 3.6it/s 0.4s<0.3s[K       3/20      1.29G      1.073      1.577      1.281         76        640: 100% ━━━━━━━━━━━━ 3/3 7.0it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       4/20      1.29G      1.166      1.861      1.365         60        640: 0% ──────────── 0/3  0.2s[K       4/20      1.29G      1.106      1.902      1.233         80        640: 33% ━━━━──────── 1/3 1.6it/s 0.4s<1.2s[K       4/20      1.29G      1.066      1.761      1.195         82        640: 66% ━━━━━━━━──── 2/3 3.0it/s 0.5s<0.3s[K       4/20      1.29G      1.066      1.761      1.195         82        640: 100% ━━━━━━━━━━━━ 3/3 5.7it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       5/20      1.29G      1.806      3.134      1.734         13        640: 0% ──────────── 0/3  0.2s[K       5/20      1.29G      1.421      2.477      1.491         76        640: 33% ━━━━──────── 1/3 1.6it/s 0.3s<1.2s[K       5/20      1.29G       1.32      2.227      1.427         53        640: 66% ━━━━━━━━──── 2/3 3.0it/s 0.5s<0.3s[K       5/20      1.29G       1.32      2.227      1.427         53        640: 100% ━━━━━━━━━━━━ 3/3 6.1it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       6/20      1.29G       1.05      1.497      1.202         57        640: 0% ──────────── 0/3  0.2s[K       6/20      1.29G      1.039      1.657      1.228         61        640: 33% ━━━━──────── 1/3 2.0it/s 0.3s<1.0s[K       6/20      1.29G      1.067      1.715      1.224         72        640: 66% ━━━━━━━━──── 2/3 2.9it/s 0.5s<0.3s[K       6/20      1.29G      1.067      1.715      1.224         72        640: 100% ━━━━━━━━━━━━ 3/3 5.8it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       7/20      1.29G      1.045      1.611      1.253         68        640: 0% ──────────── 0/3  0.1s[K       7/20      1.29G       1.12      1.795      1.263         68        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.0s[K       7/20      1.29G      1.072        1.7      1.251         61        640: 66% ━━━━━━━━──── 2/3 3.3it/s 0.5s<0.3s[K       7/20      1.29G      1.072        1.7      1.251         61        640: 100% ━━━━━━━━━━━━ 3/3 6.6it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       8/20      1.29G     0.9889      1.511      1.075         69        640: 0% ──────────── 0/3  0.1s[K       8/20      1.29G       1.15      1.707      1.216         62        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.0s[K       8/20      1.29G      1.121      1.711      1.183         55        640: 66% ━━━━━━━━──── 2/3 3.1it/s 0.5s<0.3s[K       8/20      1.29G      1.121      1.711      1.183         55        640: 100% ━━━━━━━━━━━━ 3/3 6.2it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       9/20      1.29G     0.9693      1.347      1.069         68        640: 0% ──────────── 0/3  0.1s[K       9/20      1.29G     0.9391      1.323      1.092         69        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.1s[K       9/20      1.29G     0.9632       1.36      1.123         59        640: 66% ━━━━━━━━──── 2/3 3.1it/s 0.5s<0.3s[K       9/20      1.29G     0.9632       1.36      1.123         59        640: 100% ━━━━━━━━━━━━ 3/3 6.5it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      10/20      1.29G       0.95      1.824       1.12         59        640: 0% ──────────── 0/3  0.1s[K      10/20      1.29G      0.985      1.756      1.173         44        640: 33% ━━━━──────── 1/3 1.7it/s 0.3s<1.2s[K      10/20      1.29G       1.06      1.637      1.206         53        640: 66% ━━━━━━━━──── 2/3 2.9it/s 0.5s<0.3s[K      10/20      1.29G       1.06      1.637      1.206         53        640: 100% ━━━━━━━━━━━━ 3/3 6.3it/s 0.5s
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      11/20      1.29G     0.8686      1.131      1.086         45        640: 0% ──────────── 0/3  0.1s[K      11/20      1.29G      1.049      1.293      1.106         39        640: 33% ━━━━──────── 1/3 2.2it/s 0.3s<0.9s[K      11/20      1.29G     0.9277      1.329      1.084         13        640: 66% ━━━━━━━━──── 2/3 3.8it/s 0.4s<0.3s[K      11/20      1.29G     0.9277      1.329      1.084         13        640: 100% ━━━━━━━━━━━━ 3/3 7.5it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      12/20      1.29G     0.8564      1.144      1.172         43        640: 0% ──────────── 0/3  0.2s[K      12/20      1.29G     0.8281      1.187      1.124         22        640: 33% ━━━━──────── 1/3 2.0it/s 0.3s<1.0s[K      12/20      1.29G     0.8032      1.107      1.066         31        640: 66% ━━━━━━━━──── 2/3 3.8it/s 0.4s<0.3s[K      12/20      1.29G     0.8032      1.107      1.066         31        640: 100% ━━━━━━━━━━━━ 3/3 6.9it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      13/20      1.29G      1.027      1.454      1.116         36        640: 0% ──────────── 0/3  0.1s[K      13/20      1.29G     0.9196      1.331      1.159         34        640: 33% ━━━━──────── 1/3 2.4it/s 0.2s<0.8s[K      13/20      1.29G     0.8849       1.37      1.169         21        640: 66% ━━━━━━━━──── 2/3 3.8it/s 0.4s<0.3s[K      13/20      1.29G     0.8849       1.37      1.169         21        640: 100% ━━━━━━━━━━━━ 3/3 8.1it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      14/20      1.29G      0.799      1.316      1.097         28        640: 0% ──────────── 0/3  0.2s[K      14/20      1.29G      0.888      1.203      1.086         36        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.1s[K      14/20      1.29G     0.9561      1.241      1.125         32        640: 66% ━━━━━━━━──── 2/3 3.7it/s 0.4s<0.3s[K      14/20      1.29G     0.9561      1.241      1.125         32        640: 100% ━━━━━━━━━━━━ 3/3 6.7it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      15/20      1.29G      1.013      1.292      1.322         29        640: 0% ──────────── 0/3  0.1s[K      15/20      1.29G     0.9738      1.288      1.186         37        640: 33% ━━━━──────── 1/3 2.7it/s 0.2s<0.8s[K      15/20      1.29G     0.9451      1.285      1.116         29        640: 66% ━━━━━━━━──── 2/3 4.5it/s 0.3s<0.2s[K      15/20      1.29G     0.9451      1.285      1.116         29        640: 100% ━━━━━━━━━━━━ 3/3 9.0it/s 0.3s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      16/20      1.29G     0.7165      1.153      1.065         28        640: 0% ──────────── 0/3  0.2s[K      16/20      1.29G     0.7606      0.954      1.043         46        640: 33% ━━━━──────── 1/3 2.0it/s 0.3s<1.0s[K      16/20      1.29G     0.7617       1.18      1.032         19        640: 66% ━━━━━━━━──── 2/3 3.4it/s 0.5s<0.3s[K      16/20      1.29G     0.7617       1.18      1.032         19        640: 100% ━━━━━━━━━━━━ 3/3 6.6it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      17/20      1.29G     0.6028      1.134     0.9967         20        640: 0% ──────────── 0/3  0.1s[K      17/20      1.29G     0.7441      1.106      1.006         41        640: 33% ━━━━──────── 1/3 2.1it/s 0.3s<1.0s[K      17/20      1.29G      0.807       1.08      1.042         37        640: 66% ━━━━━━━━──── 2/3 3.9it/s 0.4s<0.3s[K      17/20      1.29G      0.807       1.08      1.042         37        640: 100% ━━━━━━━━━━━━ 3/3 7.4it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      18/20      1.29G     0.6632      1.042      1.035         28        640: 0% ──────────── 0/3  0.1s[K      18/20      1.29G     0.6969      1.017      1.015         40        640: 33% ━━━━──────── 1/3 2.1it/s 0.3s<0.9s[K      18/20      1.29G     0.8812      1.156      1.084         27        640: 66% ━━━━━━━━──── 2/3 3.5it/s 0.4s<0.3s[K      18/20      1.29G     0.8812      1.156      1.084         27        640: 100% ━━━━━━━━━━━━ 3/3 7.0it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      19/20      1.29G     0.7733     0.9508     0.9835         49        640: 0% ──────────── 0/3  0.2s[K      19/20      1.29G     0.8541      1.069      1.036         24        640: 33% ━━━━──────── 1/3 2.7it/s 0.3s<0.7s[K      19/20      1.29G     0.7763      1.007      1.028         19        640: 66% ━━━━━━━━──── 2/3 4.5it/s 0.4s<0.2s[K      19/20      1.29G     0.7763      1.007      1.028         19        640: 100% ━━━━━━━━━━━━ 3/3 7.9it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      20/20      1.29G     0.6736      1.076       1.07         24        640: 0% ──────────── 0/3  0.1s[K      20/20      1.29G     0.6423     0.9933      1.023         27        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.1s[K      20/20      1.29G     0.7412      1.039      1.035         42        640: 66% ━━━━━━━━──── 2/3 3.5it/s 0.4s<0.3s[K      20/20      1.29G     0.7412      1.039      1.035         42        640: 100% ━━━━━━━━━━━━ 3/3 7.3it/s 0.4s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 1/2 1.7it/s 0.2s<0.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 6.5it/s 0.3s
+                   all         24        101      0.887      0.639      0.849      0.701
+
+20 epochs completed in 0.004 hours.
+Optimizer stripped from C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold1\weights\last.pt, 6.5MB
+Optimizer stripped from C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold1\weights\best.pt, 6.5MB
+
+Validating C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold1\weights\best.pt...
+Ultralytics 8.4.174  Python-3.14.7 torch-2.14.1+cu126 CUDA:0 (NVIDIA GeForce RTX 4050 Laptop GPU, 6140MiB)
+Model summary (fused): 72 layers, 3,151,904 parameters, 0 gradients, 8.7 GFLOPs
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 1/2 1.7it/s 0.2s<0.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 7.4it/s 0.3s
+                   all         24        101      0.887      0.639      0.849      0.702
+Speed: 0.3ms preprocess, 2.8ms inference, 0.0ms loss, 1.8ms postprocess per image
+[hand_all_e20] fold 1 완료 (45s)
+Ultralytics 8.4.174  Python-3.14.7 torch-2.14.1+cu126 CUDA:0 (NVIDIA GeForce RTX 4050 Laptop GPU, 6140MiB)
+[34m[1mengine\trainer: [0magnostic_nms=False, amp=True, angle=1.0, augment=False, auto_augment=randaugment, batch=8, bgr=0.0, box=7.5, cache=False, cfg=None, channels_last=None, classes=None, close_mosaic=10, cls=0.5, cls_pw=0.0, cls_remap=True, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold2\data.yaml, degrees=0.0, deterministic=True, device=0, dfl=1.5, dgrad=0.5, dis=6.0, distill_model=None, dlam=1.0, dlog=1.0, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=20, erasing=0.4, exist_ok=True, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=0, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, iou=0.7, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\yolov8n.pt, momentum=0.937, mosaic=1.0, multi_scale=0.0, name=fold2, nbs=64, nms=None, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=0, perspective=0.0, plots=False, pose=12.0, pretrained=True, profile=False, project=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs, quantize=None, rect=False, resume=False, retina_masks=False, rle=1.0, save=True, save_conf=False, save_crop=False, save_dir=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold2, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=tracktrack.yaml, translate=0.1, val=False, verbose=False, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=0, workspace=None
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]             
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]             
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]                 
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]                 
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]                  
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]                 
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
+ 22        [15, 18, 21]  1    897664  ultralytics.nn.modules.head.Detect           [80, 16, None, [64, 128, 256]]
+Model summary: 129 layers, 3,157,200 parameters, 3,157,184 gradients, 8.9 GFLOPs
+
+Transferred 355/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed 
+WARNING [34m[1mtrain: [0mSlow image access detected (ping: 0.10.0 ms, read: 15.74.8 MB/s, size: 144.1 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips
+[K[34m[1mtrain: [0mScanning C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold2\labels\train... 24 images, 2 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 24/24 780.5it/s 0.0s
+[34m[1mtrain: [0mNew cache created: C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold2\labels\train.cache
+[34m[1mval: [0mFast image access  (ping: 0.00.0 ms, read: 2836.7528.8 MB/s, size: 175.9 KB)
+[K[34m[1mval: [0mScanning C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold2\labels\train.cache... 24 images, 2 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 24/24 9.2Mit/s 0.0s
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and determining best 'optimizer' and 'lr0' automatically... 
+[34m[1moptimizer:[0m AdamW(lr=0.000119, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+Using 24 train, 24 val images for fraction=1.0 at imgsz=640
+Using 0 dataloader workers
+Logging results to [1mC:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold2[0m
+Starting training for 20 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       1/20      1.26G      1.184      2.338      1.416         27        640: 0% ──────────── 0/3  0.2s[K       1/20      1.28G      1.126      1.957      1.318         57        640: 33% ━━━━──────── 1/3 1.6it/s 0.4s<1.2s[K       1/20      1.28G      1.019      1.697      1.212         47        640: 66% ━━━━━━━━──── 2/3 2.5it/s 0.6s<0.4s[K       1/20      1.28G      1.019      1.697      1.212         47        640: 100% ━━━━━━━━━━━━ 3/3 4.7it/s 0.6s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       2/20      1.29G      1.092      1.715       1.18         48        640: 0% ──────────── 0/3  0.2s[K       2/20      1.29G      1.016      1.505      1.115         84        640: 33% ━━━━──────── 1/3 1.8it/s 0.3s<1.1s[K       2/20      1.29G      0.998      1.491      1.126         68        640: 66% ━━━━━━━━──── 2/3 3.0it/s 0.5s<0.3s[K       2/20      1.29G      0.998      1.491      1.126         68        640: 100% ━━━━━━━━━━━━ 3/3 6.1it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       3/20      1.29G      1.107       1.45      1.129         69        640: 0% ──────────── 0/3  0.2s[K       3/20      1.29G      1.031      1.355      1.153         52        640: 33% ━━━━──────── 1/3 2.1it/s 0.3s<0.9s[K       3/20      1.29G      0.989       1.41      1.138         63        640: 66% ━━━━━━━━──── 2/3 3.9it/s 0.4s<0.3s[K       3/20      1.29G      0.989       1.41      1.138         63        640: 100% ━━━━━━━━━━━━ 3/3 6.8it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       4/20      1.29G     0.8767      1.517      1.007         58        640: 0% ──────────── 0/3  0.1s[K       4/20      1.29G     0.9402      1.414      1.054         91        640: 33% ━━━━──────── 1/3 2.0it/s 0.3s<1.0s[K       4/20      1.29G     0.9859      1.649      1.082         59        640: 66% ━━━━━━━━──── 2/3 3.1it/s 0.5s<0.3s[K       4/20      1.29G     0.9859      1.649      1.082         59        640: 100% ━━━━━━━━━━━━ 3/3 6.5it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       5/20      1.29G      1.247      2.678      1.421         22        640: 0% ──────────── 0/3  0.2s[K       5/20      1.29G      1.176      2.193      1.318         83        640: 33% ━━━━──────── 1/3 1.7it/s 0.3s<1.1s[K       5/20      1.29G        1.1      1.895      1.276         58        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K       5/20      1.29G        1.1      1.895      1.276         58        640: 100% ━━━━━━━━━━━━ 3/3 5.6it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       6/20      1.29G     0.8539      1.608       1.09         43        640: 0% ──────────── 0/3  0.2s[K       6/20      1.29G     0.9203      1.657      1.074         59        640: 33% ━━━━──────── 1/3 1.6it/s 0.4s<1.2s[K       6/20      1.29G     0.9343       1.63      1.083         67        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K       6/20      1.29G     0.9343       1.63      1.083         67        640: 100% ━━━━━━━━━━━━ 3/3 5.6it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       7/20      1.29G      0.814      1.072      1.046         55        640: 0% ──────────── 0/3  0.1s[K       7/20      1.29G     0.9585      1.468      1.076         61        640: 33% ━━━━──────── 1/3 1.8it/s 0.3s<1.1s[K       7/20      1.29G     0.9651        1.5      1.109         58        640: 66% ━━━━━━━━──── 2/3 3.5it/s 0.4s<0.3s[K       7/20      1.29G     0.9651        1.5      1.109         58        640: 100% ━━━━━━━━━━━━ 3/3 6.8it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       8/20      1.29G      1.074      1.676      1.224         47        640: 0% ──────────── 0/3  0.1s[K       8/20      1.29G      0.978      1.464      1.142         64        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.0s[K       8/20      1.29G     0.9752       1.47      1.138         61        640: 66% ━━━━━━━━──── 2/3 3.1it/s 0.5s<0.3s[K       8/20      1.29G     0.9752       1.47      1.138         61        640: 100% ━━━━━━━━━━━━ 3/3 6.5it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       9/20      1.29G      0.825      1.291      1.021         62        640: 0% ──────────── 0/3  0.2s[K       9/20      1.29G      0.878      1.327      1.038         58        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.1s[K       9/20      1.29G     0.9134      1.347      1.081         44        640: 66% ━━━━━━━━──── 2/3 3.4it/s 0.5s<0.3s[K       9/20      1.29G     0.9134      1.347      1.081         44        640: 100% ━━━━━━━━━━━━ 3/3 6.5it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      10/20      1.29G     0.9471      1.405      1.117         55        640: 0% ──────────── 0/3  0.2s[K      10/20      1.29G     0.9308      1.363      1.113         64        640: 33% ━━━━──────── 1/3 1.7it/s 0.4s<1.2s[K      10/20      1.29G       1.02        1.4      1.198         46        640: 66% ━━━━━━━━──── 2/3 2.6it/s 0.6s<0.4s[K      10/20      1.29G       1.02        1.4      1.198         46        640: 100% ━━━━━━━━━━━━ 3/3 5.1it/s 0.6s
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      11/20      1.29G     0.9735      1.589      1.007         27        640: 0% ──────────── 0/3  0.1s[K      11/20      1.29G     0.8684      1.253      1.002         53        640: 33% ━━━━──────── 1/3 1.8it/s 0.3s<1.1s[K      11/20      1.29G     0.8351      1.275      1.004         17        640: 66% ━━━━━━━━──── 2/3 2.9it/s 0.5s<0.3s[K      11/20      1.29G     0.8351      1.275      1.004         17        640: 100% ━━━━━━━━━━━━ 3/3 6.5it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      12/20      1.29G     0.6965     0.9534     0.9272         41        640: 0% ──────────── 0/3  0.1s[K      12/20      1.29G     0.7137      1.037      0.978         30        640: 33% ━━━━──────── 1/3 2.0it/s 0.3s<1.0s[K      12/20      1.29G     0.7784        1.2      1.028         21        640: 66% ━━━━━━━━──── 2/3 3.3it/s 0.4s<0.3s[K      12/20      1.29G     0.7784        1.2      1.028         21        640: 100% ━━━━━━━━━━━━ 3/3 6.8it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      13/20      1.29G     0.9737      1.063     0.9578         42        640: 0% ──────────── 0/3  0.1s[K      13/20      1.29G      0.826      1.073     0.9912         36        640: 33% ━━━━──────── 1/3 2.1it/s 0.3s<0.9s[K      13/20      1.29G     0.8661      1.416      1.015         15        640: 66% ━━━━━━━━──── 2/3 3.0it/s 0.5s<0.3s[K      13/20      1.29G     0.8661      1.416      1.015         15        640: 100% ━━━━━━━━━━━━ 3/3 6.2it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      14/20      1.29G     0.7473      2.135      1.014         13        640: 0% ──────────── 0/3  0.1s[K      14/20      1.29G     0.8505      1.663      1.007         40        640: 33% ━━━━──────── 1/3 1.3it/s 0.4s<1.5s[K      14/20      1.29G     0.8243      1.422      1.028         44        640: 66% ━━━━━━━━──── 2/3 2.3it/s 0.6s<0.4s[K      14/20      1.29G     0.8243      1.422      1.028         44        640: 100% ━━━━━━━━━━━━ 3/3 5.1it/s 0.6s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      15/20      1.29G     0.5572       1.05     0.9997         30        640: 0% ──────────── 0/3  0.2s[K      15/20      1.29G     0.7857      1.384      1.028         28        640: 33% ━━━━──────── 1/3 1.8it/s 0.4s<1.1s[K      15/20      1.29G     0.7761       1.28      1.063         31        640: 66% ━━━━━━━━──── 2/3 3.4it/s 0.5s<0.3s[K      15/20      1.29G     0.7761       1.28      1.063         31        640: 100% ━━━━━━━━━━━━ 3/3 6.0it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      16/20      1.29G     0.6725     0.9275     0.8764         38        640: 0% ──────────── 0/3  0.1s[K      16/20      1.29G     0.7442      1.061     0.9547         36        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.0s[K      16/20      1.29G     0.8045      1.194      1.038         21        640: 66% ━━━━━━━━──── 2/3 3.0it/s 0.5s<0.3s[K      16/20      1.29G     0.8045      1.194      1.038         21        640: 100% ━━━━━━━━━━━━ 3/3 6.6it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      17/20      1.29G     0.7018      1.006     0.9296         27        640: 0% ──────────── 0/3  0.1s[K      17/20      1.29G     0.7347      1.006     0.9813         33        640: 33% ━━━━──────── 1/3 2.1it/s 0.3s<1.0s[K      17/20      1.29G     0.7492      1.036     0.9784         37        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K      17/20      1.29G     0.7492      1.036     0.9784         37        640: 100% ━━━━━━━━━━━━ 3/3 6.1it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      18/20      1.29G     0.6829      1.408      1.009         16        640: 0% ──────────── 0/3  0.1s[K      18/20      1.29G     0.8941      1.252      1.067         39        640: 33% ━━━━──────── 1/3 1.7it/s 0.3s<1.2s[K      18/20      1.29G     0.8062      1.091      1.021         35        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K      18/20      1.29G     0.8062      1.091      1.021         35        640: 100% ━━━━━━━━━━━━ 3/3 6.0it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      19/20      1.29G     0.7174      1.196     0.9925         34        640: 0% ──────────── 0/3  0.1s[K      19/20      1.29G     0.8082      1.038      1.065         34        640: 33% ━━━━──────── 1/3 2.0it/s 0.3s<1.0s[K      19/20      1.29G     0.7537      1.012      1.036         22        640: 66% ━━━━━━━━──── 2/3 3.3it/s 0.4s<0.3s[K      19/20      1.29G     0.7537      1.012      1.036         22        640: 100% ━━━━━━━━━━━━ 3/3 6.8it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      20/20      1.29G     0.7221     0.9902      1.007         36        640: 0% ──────────── 0/3  0.2s[K      20/20      1.29G     0.8393      1.255      1.134         22        640: 33% ━━━━──────── 1/3 1.5it/s 0.4s<1.3s[K      20/20      1.29G     0.7672      1.098      1.066         35        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K      20/20      1.29G     0.7672      1.098      1.066         35        640: 100% ━━━━━━━━━━━━ 3/3 5.6it/s 0.5s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 1/2 1.6it/s 0.2s<0.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 6.2it/s 0.3s
+                   all         24        101      0.963      0.625       0.82       0.68
+
+20 epochs completed in 0.005 hours.
+Optimizer stripped from C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold2\weights\last.pt, 6.5MB
+Optimizer stripped from C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold2\weights\best.pt, 6.5MB
+
+Validating C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold2\weights\best.pt...
+Ultralytics 8.4.174  Python-3.14.7 torch-2.14.1+cu126 CUDA:0 (NVIDIA GeForce RTX 4050 Laptop GPU, 6140MiB)
+Model summary (fused): 72 layers, 3,151,904 parameters, 0 gradients, 8.7 GFLOPs
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 1/2 1.9it/s 0.2s<0.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 7.2it/s 0.3s
+                   all         24        101      0.963      0.625      0.816      0.679
+Speed: 0.2ms preprocess, 2.3ms inference, 0.0ms loss, 1.8ms postprocess per image
+[hand_all_e20] fold 2 완료 (67s)
+Ultralytics 8.4.174  Python-3.14.7 torch-2.14.1+cu126 CUDA:0 (NVIDIA GeForce RTX 4050 Laptop GPU, 6140MiB)
+[34m[1mengine\trainer: [0magnostic_nms=False, amp=True, angle=1.0, augment=False, auto_augment=randaugment, batch=8, bgr=0.0, box=7.5, cache=False, cfg=None, channels_last=None, classes=None, close_mosaic=10, cls=0.5, cls_pw=0.0, cls_remap=True, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold3\data.yaml, degrees=0.0, deterministic=True, device=0, dfl=1.5, dgrad=0.5, dis=6.0, distill_model=None, dlam=1.0, dlog=1.0, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=20, erasing=0.4, exist_ok=True, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=0, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, iou=0.7, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\yolov8n.pt, momentum=0.937, mosaic=1.0, multi_scale=0.0, name=fold3, nbs=64, nms=None, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=0, perspective=0.0, plots=False, pose=12.0, pretrained=True, profile=False, project=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs, quantize=None, rect=False, resume=False, retina_masks=False, rle=1.0, save=True, save_conf=False, save_crop=False, save_dir=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold3, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=tracktrack.yaml, translate=0.1, val=False, verbose=False, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=0, workspace=None
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]             
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]             
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]                 
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]                 
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]                  
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]                 
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
+ 22        [15, 18, 21]  1    897664  ultralytics.nn.modules.head.Detect           [80, 16, None, [64, 128, 256]]
+Model summary: 129 layers, 3,157,200 parameters, 3,157,184 gradients, 8.9 GFLOPs
+
+Transferred 355/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed 
+WARNING [34m[1mtrain: [0mSlow image access detected (ping: 0.00.0 ms, read: 18.913.6 MB/s, size: 124.2 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips
+[K[34m[1mtrain: [0mScanning C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold3\labels\train... 24 images, 2 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 24/24 684.5it/s 0.0s
+[34m[1mtrain: [0mNew cache created: C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold3\labels\train.cache
+[34m[1mval: [0mFast image access  (ping: 0.00.0 ms, read: 1776.9710.8 MB/s, size: 126.6 KB)
+[K[34m[1mval: [0mScanning C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold3\labels\train.cache... 24 images, 2 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 24/24 11.2Mit/s 0.0s
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and determining best 'optimizer' and 'lr0' automatically... 
+[34m[1moptimizer:[0m AdamW(lr=0.000119, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+Using 24 train, 24 val images for fraction=1.0 at imgsz=640
+Using 0 dataloader workers
+Logging results to [1mC:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold3[0m
+Starting training for 20 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       1/20      1.26G      1.327       3.11      1.476         26        640: 0% ──────────── 0/3  0.3s[K       1/20      1.28G      1.176      2.419       1.35         57        640: 33% ━━━━──────── 1/3 1.6it/s 0.5s<1.3s[K       1/20      1.29G      1.099      2.029      1.292         46        640: 66% ━━━━━━━━──── 2/3 2.4it/s 0.7s<0.4s[K       1/20      1.29G      1.099      2.029      1.292         46        640: 100% ━━━━━━━━━━━━ 3/3 4.4it/s 0.7s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       2/20      1.29G      1.189       1.84      1.186         47        640: 0% ──────────── 0/3  0.2s[K       2/20      1.29G      1.154      1.695      1.183         84        640: 33% ━━━━──────── 1/3 1.8it/s 0.3s<1.1s[K       2/20      1.29G       1.09      1.742      1.196         41        640: 66% ━━━━━━━━──── 2/3 2.7it/s 0.6s<0.4s[K       2/20      1.29G       1.09      1.742      1.196         41        640: 100% ━━━━━━━━━━━━ 3/3 5.4it/s 0.6s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       3/20      1.29G      1.255      1.753      1.373         46        640: 0% ──────────── 0/3  0.2s[K       3/20      1.29G      1.119      1.592      1.277         54        640: 33% ━━━━──────── 1/3 1.8it/s 0.3s<1.1s[K       3/20      1.29G      1.073      1.591      1.197         76        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K       3/20      1.29G      1.073      1.591      1.197         76        640: 100% ━━━━━━━━━━━━ 3/3 5.7it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       4/20      1.29G      1.138      1.904       1.36         74        640: 0% ──────────── 0/3  0.2s[K       4/20      1.29G      1.104      1.795      1.279         74        640: 33% ━━━━──────── 1/3 1.5it/s 0.4s<1.3s[K       4/20      1.29G      1.033      1.938      1.198         50        640: 66% ━━━━━━━━──── 2/3 2.4it/s 0.6s<0.4s[K       4/20      1.29G      1.033      1.938      1.198         50        640: 100% ━━━━━━━━━━━━ 3/3 4.9it/s 0.6s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       5/20      1.29G     0.7885      1.519      1.084         36        640: 0% ──────────── 0/3  0.2s[K       5/20      1.29G      1.051      1.806       1.24         75        640: 33% ━━━━──────── 1/3 1.6it/s 0.3s<1.2s[K       5/20      1.29G      1.032       1.68      1.242         56        640: 66% ━━━━━━━━──── 2/3 2.6it/s 0.5s<0.4s[K       5/20      1.29G      1.032       1.68      1.242         56        640: 100% ━━━━━━━━━━━━ 3/3 5.5it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       6/20      1.29G      1.215      2.514      1.347         40        640: 0% ──────────── 0/3  0.2s[K       6/20      1.29G      1.223       2.14      1.253         84        640: 33% ━━━━──────── 1/3 1.6it/s 0.3s<1.3s[K       6/20      1.29G      1.204      2.114      1.278         44        640: 66% ━━━━━━━━──── 2/3 3.3it/s 0.5s<0.3s[K       6/20      1.29G      1.204      2.114      1.278         44        640: 100% ━━━━━━━━━━━━ 3/3 6.3it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       7/20      1.29G      1.082      1.713      1.342         51        640: 0% ──────────── 0/3  0.1s[K       7/20      1.29G     0.9899      1.603      1.231         61        640: 33% ━━━━──────── 1/3 1.6it/s 0.3s<1.2s[K       7/20      1.29G      1.009      1.625      1.226         67        640: 66% ━━━━━━━━──── 2/3 2.9it/s 0.5s<0.3s[K       7/20      1.29G      1.009      1.625      1.226         67        640: 100% ━━━━━━━━━━━━ 3/3 6.0it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       8/20      1.29G     0.9666      1.976      1.173         60        640: 0% ──────────── 0/3  0.1s[K       8/20      1.29G     0.9857      1.802       1.17         51        640: 33% ━━━━──────── 1/3 2.2it/s 0.3s<0.9s[K       8/20      1.29G     0.9565      1.665       1.12         64        640: 66% ━━━━━━━━──── 2/3 3.0it/s 0.5s<0.3s[K       8/20      1.29G     0.9565      1.665       1.12         64        640: 100% ━━━━━━━━━━━━ 3/3 6.3it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       9/20      1.29G      0.898       1.96      1.105         41        640: 0% ──────────── 0/3  0.1s[K       9/20      1.29G     0.8685      1.808      1.096         53        640: 33% ━━━━──────── 1/3 1.8it/s 0.3s<1.1s[K       9/20      1.29G     0.8967      1.585      1.115         61        640: 66% ━━━━━━━━──── 2/3 2.9it/s 0.5s<0.3s[K       9/20      1.29G     0.8967      1.585      1.115         61        640: 100% ━━━━━━━━━━━━ 3/3 6.1it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      10/20      1.29G      0.799      1.362      1.031         50        640: 0% ──────────── 0/3  0.1s[K      10/20      1.29G     0.8846       1.27      1.097         60        640: 33% ━━━━──────── 1/3 1.2it/s 0.4s<1.7s[K      10/20      1.29G     0.9432      1.479      1.147         41        640: 66% ━━━━━━━━──── 2/3 2.3it/s 0.6s<0.4s[K      10/20      1.29G     0.9432      1.479      1.147         41        640: 100% ━━━━━━━━━━━━ 3/3 5.1it/s 0.6s
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      11/20      1.29G     0.8595      1.184      1.012         36        640: 0% ──────────── 0/3  0.1s[K      11/20      1.29G     0.9777      1.223      1.144         30        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.1s[K      11/20      1.29G     0.9138      1.216       1.11         25        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K      11/20      1.29G     0.9138      1.216       1.11         25        640: 100% ━━━━━━━━━━━━ 3/3 6.1it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      12/20      1.29G     0.7793      1.082      1.104         39        640: 0% ──────────── 0/3  0.2s[K      12/20      1.29G     0.7563      1.038      1.024         32        640: 33% ━━━━──────── 1/3 1.5it/s 0.4s<1.4s[K      12/20      1.29G     0.7714       1.26      1.063         15        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K      12/20      1.29G     0.7714       1.26      1.063         15        640: 100% ━━━━━━━━━━━━ 3/3 5.6it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      13/20      1.29G      1.007      1.083      1.037         50        640: 0% ──────────── 0/3  0.1s[K      13/20      1.29G      1.084        1.4      1.178         21        640: 33% ━━━━──────── 1/3 1.6it/s 0.3s<1.3s[K      13/20      1.29G     0.9925      1.359       1.11         20        640: 66% ━━━━━━━━──── 2/3 3.6it/s 0.4s<0.3s[K      13/20      1.29G     0.9925      1.359       1.11         20        640: 100% ━━━━━━━━━━━━ 3/3 6.7it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      14/20      1.29G      0.982      1.429       1.14         24        640: 0% ──────────── 0/3  0.1s[K      14/20      1.29G       1.04      1.634      1.111         24        640: 33% ━━━━──────── 1/3 1.8it/s 0.3s<1.1s[K      14/20      1.29G     0.9823      1.427      1.132         42        640: 66% ━━━━━━━━──── 2/3 2.9it/s 0.5s<0.3s[K      14/20      1.29G     0.9823      1.427      1.132         42        640: 100% ━━━━━━━━━━━━ 3/3 6.1it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      15/20      1.29G     0.8474      1.154      1.096         45        640: 0% ──────────── 0/3  0.1s[K      15/20      1.29G     0.9695      1.211      1.131         25        640: 33% ━━━━──────── 1/3 1.8it/s 0.3s<1.1s[K      15/20      1.29G     0.8778      1.235      1.099         17        640: 66% ━━━━━━━━──── 2/3 3.5it/s 0.4s<0.3s[K      15/20      1.29G     0.8778      1.235      1.099         17        640: 100% ━━━━━━━━━━━━ 3/3 6.8it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      16/20      1.29G     0.7859      1.087      1.046         42        640: 0% ──────────── 0/3  0.1s[K      16/20      1.29G     0.8365      1.111      1.092         28        640: 33% ━━━━──────── 1/3 2.0it/s 0.3s<1.0s[K      16/20      1.29G     0.8129      1.221      1.075         16        640: 66% ━━━━━━━━──── 2/3 3.4it/s 0.4s<0.3s[K      16/20      1.29G     0.8129      1.221      1.075         16        640: 100% ━━━━━━━━━━━━ 3/3 6.8it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      17/20      1.29G      1.007      1.748      1.108         15        640: 0% ──────────── 0/3  0.1s[K      17/20      1.29G     0.8283      1.351      1.034         37        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.0s[K      17/20      1.29G     0.8147      1.202      1.052         39        640: 66% ━━━━━━━━──── 2/3 3.8it/s 0.4s<0.3s[K      17/20      1.29G     0.8147      1.202      1.052         39        640: 100% ━━━━━━━━━━━━ 3/3 7.0it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      18/20      1.29G     0.7112     0.9895     0.9537         24        640: 0% ──────────── 0/3  0.2s[K      18/20      1.29G     0.8312      1.013      1.036         26        640: 33% ━━━━──────── 1/3 2.0it/s 0.3s<1.0s[K      18/20      1.29G     0.8153     0.9605      1.028         34        640: 66% ━━━━━━━━──── 2/3 3.2it/s 0.5s<0.3s[K      18/20      1.29G     0.8153     0.9605      1.028         34        640: 100% ━━━━━━━━━━━━ 3/3 6.1it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      19/20      1.29G     0.8873      1.067      1.108         32        640: 0% ──────────── 0/3  0.1s[K      19/20      1.29G     0.8484     0.9926      1.098         32        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.1s[K      19/20      1.29G      0.971      1.283      1.141         21        640: 66% ━━━━━━━━──── 2/3 3.0it/s 0.5s<0.3s[K      19/20      1.29G      0.971      1.283      1.141         21        640: 100% ━━━━━━━━━━━━ 3/3 6.3it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      20/20      1.29G      1.292      1.533      1.374         18        640: 0% ──────────── 0/3  0.1s[K      20/20      1.29G      1.039      1.225      1.172         34        640: 33% ━━━━──────── 1/3 1.8it/s 0.3s<1.1s[K      20/20      1.29G     0.9722      1.219      1.161         31        640: 66% ━━━━━━━━──── 2/3 4.0it/s 0.4s<0.3s[K      20/20      1.29G     0.9722      1.219      1.161         31        640: 100% ━━━━━━━━━━━━ 3/3 7.1it/s 0.4s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 1/2 2.1it/s 0.1s<0.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 7.5it/s 0.3s
+                   all         24         93      0.876      0.735      0.865      0.725
+
+20 epochs completed in 0.005 hours.
+Optimizer stripped from C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold3\weights\last.pt, 6.5MB
+Optimizer stripped from C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold3\weights\best.pt, 6.5MB
+
+Validating C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold3\weights\best.pt...
+Ultralytics 8.4.174  Python-3.14.7 torch-2.14.1+cu126 CUDA:0 (NVIDIA GeForce RTX 4050 Laptop GPU, 6140MiB)
+Model summary (fused): 72 layers, 3,151,904 parameters, 0 gradients, 8.7 GFLOPs
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 1/2 2.1it/s 0.1s<0.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 8.7it/s 0.2s
+                   all         24         93      0.882      0.737      0.865      0.723
+Speed: 0.2ms preprocess, 2.6ms inference, 0.0ms loss, 2.1ms postprocess per image
+[hand_all_e20] fold 3 완료 (90s)
+Ultralytics 8.4.174  Python-3.14.7 torch-2.14.1+cu126 CUDA:0 (NVIDIA GeForce RTX 4050 Laptop GPU, 6140MiB)
+[34m[1mengine\trainer: [0magnostic_nms=False, amp=True, angle=1.0, augment=False, auto_augment=randaugment, batch=8, bgr=0.0, box=7.5, cache=False, cfg=None, channels_last=None, classes=None, close_mosaic=10, cls=0.5, cls_pw=0.0, cls_remap=True, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold4\data.yaml, degrees=0.0, deterministic=True, device=0, dfl=1.5, dgrad=0.5, dis=6.0, distill_model=None, dlam=1.0, dlog=1.0, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=20, erasing=0.4, exist_ok=True, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=0, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, iou=0.7, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\yolov8n.pt, momentum=0.937, mosaic=1.0, multi_scale=0.0, name=fold4, nbs=64, nms=None, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=0, perspective=0.0, plots=False, pose=12.0, pretrained=True, profile=False, project=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs, quantize=None, rect=False, resume=False, retina_masks=False, rle=1.0, save=True, save_conf=False, save_crop=False, save_dir=C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold4, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=0, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=tracktrack.yaml, translate=0.1, val=False, verbose=False, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=0, workspace=None
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]             
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]             
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]                 
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]                 
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]                  
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]                 
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
+ 22        [15, 18, 21]  1    897664  ultralytics.nn.modules.head.Detect           [80, 16, None, [64, 128, 256]]
+Model summary: 129 layers, 3,157,200 parameters, 3,157,184 gradients, 8.9 GFLOPs
+
+Transferred 355/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed 
+WARNING [34m[1mtrain: [0mSlow image access detected (ping: 0.00.0 ms, read: 12.66.2 MB/s, size: 137.9 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips
+[K[34m[1mtrain: [0mScanning C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold4\labels\train... 24 images, 1 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 24/24 751.6it/s 0.0s
+[34m[1mtrain: [0mNew cache created: C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold4\labels\train.cache
+[34m[1mval: [0mFast image access  (ping: 0.00.0 ms, read: 2304.31042.1 MB/s, size: 152.3 KB)
+[K[34m[1mval: [0mScanning C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\fold4\labels\train.cache... 24 images, 1 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 24/24 11.2Mit/s 0.0s
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and determining best 'optimizer' and 'lr0' automatically... 
+[34m[1moptimizer:[0m AdamW(lr=0.000119, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+Using 24 train, 24 val images for fraction=1.0 at imgsz=640
+Using 0 dataloader workers
+Logging results to [1mC:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold4[0m
+Starting training for 20 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       1/20      1.25G     0.9998      2.169      1.193         29        640: 0% ──────────── 0/3  0.2s[K       1/20      1.27G     0.9562       1.96      1.165         53        640: 33% ━━━━──────── 1/3 1.7it/s 0.4s<1.2s[K       1/20      1.28G     0.9607      1.808      1.197         35        640: 66% ━━━━━━━━──── 2/3 3.0it/s 0.6s<0.3s[K       1/20      1.28G     0.9607      1.808      1.197         35        640: 100% ━━━━━━━━━━━━ 3/3 5.2it/s 0.6s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       2/20      1.28G      1.191      2.415      1.266         56        640: 0% ──────────── 0/3  0.2s[K       2/20      1.28G      1.059       1.99      1.202         63        640: 33% ━━━━──────── 1/3 1.5it/s 0.4s<1.3s[K       2/20      1.28G      1.105      1.903      1.232         51        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K       2/20      1.28G      1.105      1.903      1.232         51        640: 100% ━━━━━━━━━━━━ 3/3 5.8it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       3/20      1.28G      1.057      1.729      1.252         56        640: 0% ──────────── 0/3  0.2s[K       3/20      1.28G     0.9901      1.641      1.194         67        640: 33% ━━━━──────── 1/3 1.5it/s 0.4s<1.3s[K       3/20      1.28G      1.022      1.607       1.17         92        640: 66% ━━━━━━━━──── 2/3 2.6it/s 0.6s<0.4s[K       3/20      1.28G      1.022      1.607       1.17         92        640: 100% ━━━━━━━━━━━━ 3/3 5.3it/s 0.6s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       4/20      1.28G      1.135      1.837      1.364         64        640: 0% ──────────── 0/3  0.2s[K       4/20      1.28G      1.033      1.886      1.247         76        640: 33% ━━━━──────── 1/3 1.6it/s 0.4s<1.3s[K       4/20      1.28G      1.018      1.857      1.195         73        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K       4/20      1.28G      1.018      1.857      1.195         73        640: 100% ━━━━━━━━━━━━ 3/3 5.6it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       5/20      1.28G       1.12      1.598      1.181         50        640: 0% ──────────── 0/3  0.1s[K       5/20      1.28G      1.052      1.758      1.208         58        640: 33% ━━━━──────── 1/3 1.6it/s 0.3s<1.2s[K       5/20      1.28G      1.057      1.673      1.235         56        640: 66% ━━━━━━━━──── 2/3 2.9it/s 0.5s<0.3s[K       5/20      1.28G      1.057      1.673      1.235         56        640: 100% ━━━━━━━━━━━━ 3/3 5.9it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       6/20      1.28G      1.063      1.725      1.307         53        640: 0% ──────────── 0/3  0.1s[K       6/20      1.28G      1.064      1.651      1.209         83        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.1s[K       6/20      1.28G      1.035      1.671      1.173         46        640: 66% ━━━━━━━━──── 2/3 3.3it/s 0.5s<0.3s[K       6/20      1.28G      1.035      1.671      1.173         46        640: 100% ━━━━━━━━━━━━ 3/3 6.7it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       7/20      1.28G      1.072      1.745      1.368         54        640: 0% ──────────── 0/3  0.1s[K       7/20      1.28G      1.017      1.575      1.233         66        640: 33% ━━━━──────── 1/3 2.1it/s 0.3s<0.9s[K       7/20      1.28G      1.003      1.498      1.209         70        640: 66% ━━━━━━━━──── 2/3 3.2it/s 0.4s<0.3s[K       7/20      1.28G      1.003      1.498      1.209         70        640: 100% ━━━━━━━━━━━━ 3/3 6.7it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       8/20      1.28G      1.128      1.594      1.172         51        640: 0% ──────────── 0/3  0.1s[K       8/20      1.28G      1.184      1.938      1.279         26        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.0s[K       8/20      1.28G      1.078      1.697      1.181         71        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K       8/20      1.28G      1.078      1.697      1.181         71        640: 100% ━━━━━━━━━━━━ 3/3 6.0it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       9/20      1.28G     0.8904      1.347       1.04         61        640: 0% ──────────── 0/3  0.1s[K       9/20      1.28G     0.9166       1.36      1.088         58        640: 33% ━━━━──────── 1/3 1.6it/s 0.3s<1.2s[K       9/20      1.28G     0.9459      1.365      1.125         45        640: 66% ━━━━━━━━──── 2/3 2.8it/s 0.5s<0.4s[K       9/20      1.28G     0.9459      1.365      1.125         45        640: 100% ━━━━━━━━━━━━ 3/3 6.0it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      10/20      1.28G     0.9203      1.174      1.112         40        640: 0% ──────────── 0/3  0.2s[K      10/20      1.28G     0.9586      1.205      1.159         68        640: 33% ━━━━──────── 1/3 1.8it/s 0.3s<1.1s[K      10/20      1.28G     0.9715      1.399      1.146         44        640: 66% ━━━━━━━━──── 2/3 3.0it/s 0.5s<0.3s[K      10/20      1.28G     0.9715      1.399      1.146         44        640: 100% ━━━━━━━━━━━━ 3/3 6.0it/s 0.5s
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      11/20      1.28G      1.014      1.696        1.2         25        640: 0% ──────────── 0/3  0.1s[K      11/20      1.28G     0.8859      1.306      1.114         32        640: 33% ━━━━──────── 1/3 1.6it/s 0.3s<1.3s[K      11/20      1.28G     0.8246      1.215      1.078         33        640: 66% ━━━━━━━━──── 2/3 2.7it/s 0.5s<0.4s[K      11/20      1.28G     0.8246      1.215      1.078         33        640: 100% ━━━━━━━━━━━━ 3/3 5.8it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      12/20      1.28G     0.7253     0.9953      1.119         33        640: 0% ──────────── 0/3  0.1s[K      12/20      1.28G     0.7162     0.9385      1.028         29        640: 33% ━━━━──────── 1/3 2.0it/s 0.3s<1.0s[K      12/20      1.28G     0.7505       1.03      1.036         32        640: 66% ━━━━━━━━──── 2/3 3.5it/s 0.4s<0.3s[K      12/20      1.28G     0.7505       1.03      1.036         32        640: 100% ━━━━━━━━━━━━ 3/3 7.1it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      13/20      1.28G      1.016      1.186       1.05         51        640: 0% ──────────── 0/3  0.1s[K      13/20      1.28G     0.9015      1.167      1.068         27        640: 33% ━━━━──────── 1/3 1.8it/s 0.3s<1.1s[K      13/20      1.28G     0.9685      1.338      1.131         20        640: 66% ━━━━━━━━──── 2/3 3.1it/s 0.5s<0.3s[K      13/20      1.28G     0.9685      1.338      1.131         20        640: 100% ━━━━━━━━━━━━ 3/3 6.3it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      14/20      1.28G      1.042      1.539      1.127         22        640: 0% ──────────── 0/3  0.1s[K      14/20      1.28G     0.9451      1.428      1.071         21        640: 33% ━━━━──────── 1/3 1.7it/s 0.3s<1.2s[K      14/20      1.28G     0.8943      1.267      1.061         51        640: 66% ━━━━━━━━──── 2/3 3.2it/s 0.5s<0.3s[K      14/20      1.28G     0.8943      1.267      1.061         51        640: 100% ━━━━━━━━━━━━ 3/3 6.3it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      15/20      1.28G     0.9311      1.219        1.2         41        640: 0% ──────────── 0/3  0.2s[K      15/20      1.28G      1.058      1.421      1.191         25        640: 33% ━━━━──────── 1/3 2.8it/s 0.3s<0.7s[K      15/20      1.28G     0.9144      1.248      1.112         30        640: 66% ━━━━━━━━──── 2/3 4.1it/s 0.4s<0.2s[K      15/20      1.28G     0.9144      1.248      1.112         30        640: 100% ━━━━━━━━━━━━ 3/3 7.4it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      16/20      1.28G     0.6796      1.013      1.012         33        640: 0% ──────────── 0/3  0.1s[K      16/20      1.28G     0.7843     0.9578      1.089         31        640: 33% ━━━━──────── 1/3 2.6it/s 0.2s<0.8s[K      16/20      1.28G     0.8805      1.043      1.112         30        640: 66% ━━━━━━━━──── 2/3 3.6it/s 0.4s<0.3s[K      16/20      1.28G     0.8805      1.043      1.112         30        640: 100% ━━━━━━━━━━━━ 3/3 7.5it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      17/20      1.28G     0.6835      0.873     0.9303         27        640: 0% ──────────── 0/3  0.2s[K      17/20      1.28G     0.7667     0.9363      1.022         30        640: 33% ━━━━──────── 1/3 1.9it/s 0.3s<1.0s[K      17/20      1.28G     0.7673     0.9095      1.036         42        640: 66% ━━━━━━━━──── 2/3 3.3it/s 0.5s<0.3s[K      17/20      1.28G     0.7673     0.9095      1.036         42        640: 100% ━━━━━━━━━━━━ 3/3 6.5it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      18/20      1.28G     0.8232     0.8447      1.094         29        640: 0% ──────────── 0/3  0.1s[K      18/20      1.28G     0.9055      1.224      1.133         20        640: 33% ━━━━──────── 1/3 1.8it/s 0.3s<1.1s[K      18/20      1.28G     0.8819      1.093      1.104         43        640: 66% ━━━━━━━━──── 2/3 3.3it/s 0.4s<0.3s[K      18/20      1.28G     0.8819      1.093      1.104         43        640: 100% ━━━━━━━━━━━━ 3/3 6.9it/s 0.4s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      19/20      1.28G      0.691     0.9299      1.089         24        640: 0% ──────────── 0/3  0.1s[K      19/20      1.28G     0.7941     0.9674      1.064         40        640: 33% ━━━━──────── 1/3 1.5it/s 0.3s<1.3s[K      19/20      1.28G      0.886      1.073       1.08         27        640: 66% ━━━━━━━━──── 2/3 2.9it/s 0.5s<0.3s[K      19/20      1.28G      0.886      1.073       1.08         27        640: 100% ━━━━━━━━━━━━ 3/3 6.1it/s 0.5s
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K      20/20      1.28G     0.8114      1.424      1.019         20        640: 0% ──────────── 0/3  0.1s[K      20/20      1.28G     0.7885      1.158     0.9786         37        640: 33% ━━━━──────── 1/3 2.1it/s 0.3s<0.9s[K      20/20      1.28G     0.7857      1.077      1.015         35        640: 66% ━━━━━━━━──── 2/3 3.1it/s 0.5s<0.3s[K      20/20      1.28G     0.7857      1.077      1.015         35        640: 100% ━━━━━━━━━━━━ 3/3 6.4it/s 0.5s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 1/2 1.5it/s 0.2s<0.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 6.3it/s 0.3s
+                   all         24        102      0.842      0.756       0.89      0.712
+
+20 epochs completed in 0.004 hours.
+Optimizer stripped from C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold4\weights\last.pt, 6.5MB
+Optimizer stripped from C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold4\weights\best.pt, 6.5MB
+
+Validating C:\Users\User\Desktop\root\docker11\notebooks\MAICON_hub\training_s\26_10_09\afternoon\problem04\_exp2\ft\hand_all_e20\runs\fold4\weights\best.pt...
+Ultralytics 8.4.174  Python-3.14.7 torch-2.14.1+cu126 CUDA:0 (NVIDIA GeForce RTX 4050 Laptop GPU, 6140MiB)
+Model summary (fused): 72 layers, 3,151,904 parameters, 0 gradients, 8.7 GFLOPs
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 1/2 1.7it/s 0.2s<0.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 2/2 6.7it/s 0.3s
+                   all         24        102      0.843      0.759       0.89      0.712
+Speed: 0.2ms preprocess, 2.8ms inference, 0.0ms loss, 2.3ms postprocess per image
+[hand_all_e20] fold 4 완료 (112s)
+RESULT {"name": "hand_all_e20", "epochs": 20, "freeze": 0, "person_thr": 0.175, "person_mae": 0.5, "person_loo": 0.5666666666666667, "person_bias": -0.1, "vehicle_thr": 0.2, "vehicle_mae": 0.5333333333333333, "vehicle_loo": 0.5333333333333333, "vehicle_bias": -0.26666666666666666, "person_mae_mainthr": 0.5333333333333333, "vehicle_mae_mainthr": 0.5333333333333333, "seconds": 111.98950052261353}

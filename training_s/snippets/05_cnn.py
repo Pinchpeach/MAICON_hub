@@ -4,6 +4,8 @@
 #   m = train_cnn(X_tr, y_tr, epochs=12, n_classes=10)      # 베이스라인 -> 에폭·증강 조정(하나씩) -> 폭·깊이 확대 순으로 확장
 #   proba = predict_cnn(m, X_va)                            # 좌우반전 TTA 평균 확률
 # 팁: 28x28 흑백 기준 에폭당 약 10~12초(CPU 12 스레드, 1만 장). 시드 앙상블은 효과가 확인될 때만, 해상도가 크면 에폭당 시간이 급증한다.
+#     순서(규칙 14.3): 라벨이 합·개수 같은 묶음 라벨이면 먼저 10_weak_sum.py 로 손실을 맞춘다 -> 이 베이스라인 -> 세부 매개변수(학습률·배치·가중치 감쇠·에폭·
+#     드롭아웃·라벨 스무딩·증강)를 한 번에 하나씩 -> 효과가 노이즈면 폭·깊이 확대. 실전에서는 time_epochs 로 잰 시간으로 시험 학습 횟수를 먼저 정한다(대개 한두 번).
 import os, time
 import numpy as np, torch, torch.nn as nn, torch.nn.functional as F
 torch.set_num_threads(os.cpu_count() or 4)

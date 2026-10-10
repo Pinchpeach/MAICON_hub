@@ -1,0 +1,6 @@
+{"tag": "n_e30_base", "fold": 0, "train_images": 46, "map50": 0.8793, "recall": 0.8333, "single_exact": 0.75, "multi_exact": 0.25, "multi_mae": 1.542, "multi_n": 24, "seconds": 64.3}
+{"tag": "n_e30_base", "fold": 1, "train_images": 46, "map50": 0.7293, "recall": 0.6667, "single_exact": 0.75, "multi_exact": 0.083, "multi_mae": 2.0, "multi_n": 24, "seconds": 64.3}
+{"tag": "n_e30_base", "fold": 2, "train_images": 46, "map50": 0.7361, "recall": 0.8333, "single_exact": 0.917, "multi_exact": 0.167, "multi_mae": 1.542, "multi_n": 24, "seconds": 57.1}
+{"tag": "n_e30_base", "fold": 3, "train_images": 47, "map50": 0.7377, "recall": 0.6364, "single_exact": 0.545, "multi_exact": 0.045, "multi_mae": 2.227, "multi_n": 22, "seconds": 64.6}
+{"tag": "n_e30_base", "fold": 4, "train_images": 47, "map50": 0.8427, "recall": 0.7273, "single_exact": 0.727, "multi_exact": 0.045, "multi_mae": 1.591, "multi_n": 22, "seconds": 63.3}
+{"tag": "n_e30_dihedral", "fold": 0, "train_images": 138, "map50": 0.9827, "recall": 0.9931, "single_exact": 1.0, "multi_exact": 0.292, "multi_mae": 1.0, "multi_n": 24, "seconds": 125.4}

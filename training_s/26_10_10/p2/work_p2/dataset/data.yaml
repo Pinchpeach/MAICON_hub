@@ -1,0 +1,5 @@
+path: "C:\\Users\\User\\Desktop\\root\\docker11\\notebooks\\MAICON_hub\\training_s\\26_10_10\\p2\\work_p2\\dataset"
+train: train/images
+val: val/images
+names:
+  0: drone

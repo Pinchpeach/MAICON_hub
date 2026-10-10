@@ -1,0 +1,16 @@
+{
+ "name": "pseudo_all_e20",
+ "epochs": 20,
+ "freeze": 0,
+ "person_thr": 0.175,
+ "person_mae": 0.5,
+ "person_loo": 0.5333333333333333,
+ "person_bias": -0.1,
+ "vehicle_thr": 0.2,
+ "vehicle_mae": 0.6,
+ "vehicle_loo": 0.6333333333333333,
+ "vehicle_bias": -0.3333333333333333,
+ "person_mae_mainthr": 0.4666666666666667,
+ "vehicle_mae_mainthr": 0.6,
+ "seconds": 104.89181542396545
+}

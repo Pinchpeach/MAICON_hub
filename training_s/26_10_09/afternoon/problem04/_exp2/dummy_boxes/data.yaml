@@ -1,0 +1,7 @@
+# 의사 박스(yolov8n 예측)로 만든 더미 데이터셋. 사람이 그린 정답이 아님
+path: .
+train: images
+val: images
+names:
+  0: person
+  1: vehicle
