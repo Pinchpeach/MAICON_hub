@@ -1,0 +1,28 @@
+name: docker11
+services:
+  jupyterlab:
+    build: .
+    image: docker11-jupyterlab:lab-4.0.5-torch
+    container_name: jupyter
+    shm_size: "2gb"
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      # 차트의 auth.token 에 해당 (빈 값이면 자동 생성)
+      - JUPYTER_TOKEN=${JUPYTER_TOKEN:-changeme}
+    deploy:
+      resources:
+        reservations:
+          cpus: "0.5"
+          memory: 512M
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+        limits:
+          cpus: "1"
+          memory: 4G
+    restart: unless-stopped

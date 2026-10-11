@@ -1,0 +1,43 @@
+replicaCount: 1
+
+image:
+  repository: cr.makina.rocks/runway-applications/catalogs/jupyterlab
+  tag: lab-4.0.5
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8888
+
+podSecurityContext:
+  fsGroup: 100
+
+resources:
+  requests:
+    cpu: "500m"
+    memory: "512Mi"
+    nvidia.com/gpu: 1
+    nvidia.com/gpucores: 75
+    nvidia.com/gpumem: 5500
+  limits:
+    cpu: "1"
+    memory: "20Gi"
+    nvidia.com/gpu: 1
+    nvidia.com/gpucores: 75
+    nvidia.com/gpumem: 5500
+
+persistence:
+  enabled: true
+  mountPath: /home/jovyan
+  keepOnDelete: true
+  accessMode: ReadWriteOnce
+  storageClassName: ""
+  size: 1Gi
+
+auth:
+  token: ""   # 비워두면 자동 생성. 직접 지정하려면 값을 입력
+
+httpRoute:
+  enabled: true
+  hostname: "choi11.gpu.aiswlab.co.kr"
+  hostnames: []
