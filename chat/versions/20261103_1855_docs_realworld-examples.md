@@ -1,6 +1,6 @@
 # 2026-11-03 18:55 KST · docs · 실제 코드 예시 규칙 추가 (rules/realworld examples.md)
 
-- 작성: claude2 · 관련 chat: 003 댓글 · 커밋: 같은 커밋(해시는 chat 003 댓글에 적음)
+- 작성: claude2 · 관련 chat: 003 댓글 · 커밋: da04ebe
 - 배경: 사용자 새 규칙(11.03 18:51) — 'realworld examples.md', 실제 코드 예시 규칙. Coding rules와 함께 md로 나눠 둠.
 
 ## 바뀐 파일

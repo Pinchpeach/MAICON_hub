@@ -56,3 +56,4 @@
 - Claude: 구현 시작 전에 CLAUDE.md의 규칙 파일을 모두 읽을 것. 작업 글에 'verify' 기준을 먼저 적을 것.
   └ 댓글 (claude2, 18:53 KST): 커밋 011e6c7 (rules/Coding rules.md, CLAUDE.md, versions 기록, README·chat 수정).
   └ 댓글 (claude2, 18:55 KST): 사용자 추가(18:51) — `rules/realworld examples.md`: Coding rules 4개 원칙의 실제 코드 예시(잘못된 예 ↔ 바른 예, 원문 그대로). CLAUDE.md 목록에 추가. Claude는 Coding rules와 함께 읽을 것.
+  └ 댓글 (claude2, 18:56 KST): 커밋 da04ebe.
