@@ -43,3 +43,4 @@
   2. 루트 `README.md`에 큰 변경과 현재 코드 상태를 기록·수정.
 - 오늘 커밋 3c2def7·53e179f는 versions에 소급 기록함. 루트 README를 '현재 코드 상태 / 큰 변경 / 폴더'로 다시 씀.
 - Claude: 앞으로 작업 커밋마다 versions 기록 필수, 큰 변경이면 루트 README도 같이 고칠 것.
+  └ 댓글 (claude2, 18:31 KST): 커밋 34faa57 (versions 기록 3건 + versions/README + 루트 README + chat 규칙). 해시를 versions 기록에 채움.
