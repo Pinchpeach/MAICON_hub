@@ -24,3 +24,4 @@
 | 2026-11-03 18:27 | docs | chat 글·작업 커밋은 main에 직접 | 20261103_1827_docs_main-direct.md |
 | 2026-11-03 18:30 | docs | versions 폴더·루트 README 규칙 추가 | 20261103_1830_docs_versions-readme-rules.md |
 | 2026-11-03 18:52 | docs | 코딩 규칙 추가 (rules/Coding rules.md, 루트 CLAUDE.md) | 20261103_1852_docs_coding-rules.md |
+| 2026-11-03 18:55 | docs | 실제 코드 예시 규칙 추가 (rules/realworld examples.md) | 20261103_1855_docs_realworld-examples.md |

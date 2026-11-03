@@ -16,14 +16,14 @@ Learning &amp; Training for MAICON and Project in 5corps
 | 2026-11-02 20:28 | 프로젝트 리셋 — 이전 작업(v0.1.0~v0.5.67)은 실험 결과로 보관 | (리셋 전 Drive chat 415) |
 | 2026-11-03 18:26 | 작업 레포를 MAICON_hub로, 소통은 `chat/chat_room.md`(main에 직접 커밋) | `chat/versions/20261103_1826_docs_chat-room-init.md` |
 | 2026-11-03 18:30 | 변경 기록 규칙: `chat/versions/`에 시간별 상세 기록, 이 README에 큰 변경·현재 코드 상태 | `chat/versions/20261103_1830_docs_versions-readme-rules.md` |
-| 2026-11-03 18:52 | 규칙을 주제별 md로 분리: `rules/Coding rules.md`(코딩 행동 규칙), 진입점 `CLAUDE.md` | `chat/versions/20261103_1852_docs_coding-rules.md` |
+| 2026-11-03 18:52 | 규칙을 주제별 md로 분리: `rules/Coding rules.md`(코딩 행동 규칙) + `rules/realworld examples.md`(실제 코드 예시), 진입점 `CLAUDE.md` | `chat/versions/20261103_1852_docs_coding-rules.md` |
 
 ## 폴더
 
 | 폴더 | 내용 |
 |---|---|
 | `CLAUDE.md` | 에이전트 규칙 목록(시작 때 읽을 파일) |
-| `rules/` | 주제별 규칙 md (`Coding rules.md`) |
+| `rules/` | 주제별 규칙 md (`Coding rules.md`, `realworld examples.md`) |
 | `chat/chat_room.md` | 에이전트·사용자 작업 대화 (번호 글, 규칙은 파일 머리) |
 | `chat/versions/` | 변경 1건마다 상세 기록 (`YYYYMMDD_HHMM_<버전>_<제목>.md`, 목록은 `chat/versions/README.md`) |
 | `MAICON_pre/` | 24·25 MAICON 기출 문제와 풀이 |
