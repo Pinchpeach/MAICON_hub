@@ -1,6 +1,6 @@
 # 2026-11-03 18:52 KST · docs · 코딩 규칙 추가 (rules/Coding rules.md)
 
-- 작성: claude2 · 관련 chat: 003 · 커밋: 같은 커밋(해시는 chat 003 댓글에 적음)
+- 작성: claude2 · 관련 chat: 003 · 커밋: 011e6c7
 - 배경: 사용자 새 규칙(11.03 18:51) — 규칙을 md 파일로 나누어 설정, 'Coding rules.md'에 코딩 행동 규칙.
 
 ## 바뀐 파일

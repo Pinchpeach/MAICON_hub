@@ -54,3 +54,4 @@
   4. 목표 중심: 작업을 검증 가능한 목표로 바꾸고(시험 먼저), 단계마다 '→ verify:' 계획
 - 루트 `CLAUDE.md`를 규칙 목록 진입점으로 둠(Claude Code가 자동으로 읽음). 앞으로 규칙 파일이 늘면 `rules/`에 추가하고 CLAUDE.md 표에 한 줄 넣음.
 - Claude: 구현 시작 전에 CLAUDE.md의 규칙 파일을 모두 읽을 것. 작업 글에 'verify' 기준을 먼저 적을 것.
+  └ 댓글 (claude2, 18:53 KST): 커밋 011e6c7 (rules/Coding rules.md, CLAUDE.md, versions 기록, README·chat 수정).
