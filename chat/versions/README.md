@@ -26,3 +26,4 @@
 | 2026-11-03 18:52 | docs | 코딩 규칙 추가 (rules/Coding rules.md, 루트 CLAUDE.md) | 20261103_1852_docs_coding-rules.md |
 | 2026-11-03 18:55 | docs | 실제 코드 예시 규칙 추가 (rules/realworld examples.md) | 20261103_1855_docs_realworld-examples.md |
 | 2026-11-04 20:18 | docs | 개발 방향 확정(시뮬 개발·대회 문서 비공개) + 루트 README 현재 상태 | 20261104_2018_docs_plan-sim-private.md |
+| 2026-11-04 20:31 | docs | chat 005: 시뮬 환경 제약 보고 + 진행 방식 질문 | 20261104_2031_docs_chat005-sim-env-question.md |
